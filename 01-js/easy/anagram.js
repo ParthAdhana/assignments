@@ -5,7 +5,10 @@
 */
 
 function isAnagram(str1, str2) {
-
+  
+  var x=(str1.toLowerCase().split("").sort().join(""));
+  var y=str2.toLowerCase().split("").sort().join("");
+  return x==y;
 }
-
+//isAnagram('Debit Card','Bad Credit');
 module.exports = isAnagram;
