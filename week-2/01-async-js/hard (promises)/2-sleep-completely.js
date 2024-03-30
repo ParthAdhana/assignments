@@ -5,6 +5,18 @@
  */
 
 function sleep(milliseconds) {
+    
+    return new Promise(function(resolves){
+        var startTime=new Date().getTime();
+        var endTime
+        while(true)
+        {
+            endTime=new Date().getTime();
+            if(endTime-startTime>milliseconds)break;
+        }
+        resolves();
+    });
+    
 }
-
+//sleep(5000)
 module.exports = sleep;
